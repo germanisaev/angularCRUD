@@ -1,0 +1,64 @@
+<form class="emp-form" #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+  
+  <input type="hidden" name="EmployeeID" #EmployeeID="ngModel" [(ngModel)]="employee.EmployeeID">
+  
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="FirstName" #FirstName="ngModel" [(ngModel)]="employee.FirstName"
+        placeholder="First Name" required>
+        
+        <div [hidden]="FirstName.valid || FirstName.pristine" class="alert alert-danger">
+            First Name is required
+        </div>
+        
+        <!--
+      <div class="validation-error" *ngIf="FirstName.invalid && FirstName.touched">This Field is Required.</div>
+      -->
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="LastName" #LastName="ngModel" [(ngModel)]="employee.LastName" placeholder="Last Name"
+        required>
+        <div [hidden]="LastName.valid || LastName.pristine" class="alert alert-danger">
+            Last Name is required
+        </div>
+        <!--
+      <div class="validation-error" *ngIf="employeeForm.LastName.invalid && employeeForm.LastName.touched">This Field is Required.</div>
+      -->
+    </div>
+  </div>
+  <div class="form-group">
+    <input class="form-control" name="Position" #Position="ngModel" [(ngModel)]="employee.Position" placeholder="Position">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="EmpCode" #EmpCode="ngModel" [(ngModel)]="employee.EmpCode" placeholder="Emp Code">
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="Office" #Office="ngModel" [(ngModel)]="employee.Office" placeholder="Office">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!employeeForm.form.valid" type="submit" class="btn btn-lg btn-block btn-info">
+        <i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(employeeForm)">
+        <i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>
+
+<br>
+<pre>{{alert|json}}</pre>
+<!--
+<br>
+<div [hidden]="!submitted" class="alert alert-success success">
+  {{message}}
+</div>
+-->
+<!--
+<pre>{{employee|json}}</pre>
+
+<pre>{{selectedEmployee|json}}</pre>
+-->

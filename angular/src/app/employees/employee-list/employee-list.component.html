@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row row-color" *ngFor="let employee of employees">
+    <div class="col-md-1 col-sm-1 col-xs-12 col-number">{{employee.EmployeeID}}</div>
+    <div class="col-md-6 col-sm-6 col-xs-12 col-text">{{employee.FirstName}} - {{employee.LastName}}</div>
+    <div class="col-md-3 col-sm-3 col-xs-12 col-text">{{employee.EmpCode}}</div>
+    <div class="col-md-1 col-sm-1 col-xs-12 align-center">
+      <a class="btn" (click)="onEdit(employee)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+    </div>
+    <div div class="col-md-1 col-sm-1 col-xs-12 align-center">
+      <a class="btn text-danger" (click)="onDelete(employee)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!--
+<br>
+<div [hidden]="!submitted" class="alert alert-success success">{{message}}</div>
+-->
+<!--
+<pre>{{employee|json}}</pre>
+-->

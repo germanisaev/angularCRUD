@@ -1,0 +1,19 @@
+<div style="text-align:center">
+  <h2 class="jumbotron bg-secondary text-white">Employee Register</h2>
+</div>
+<div class="row">
+  <div class="col-md-12 col-xs-12">
+    <app-alert></app-alert>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-xs-12">
+    <app-employee></app-employee>
+  </div>
+  <div class="col-md-6 col-xs-12">
+    <app-employee-list (click)="onDelete()"></app-employee-list>
+  </div>
+</div>
+<div class="modal">
+  <app-confirm (employeeClickedEvent)="openModal($event)"></app-confirm>
+</div>

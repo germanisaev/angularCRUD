@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Lato;
+}
+
+form.emp-form {
+    background-color: #dbdbdb;
+    border-radius: 4px;
+    padding: 10px 10px 0 10px;
+    width: 100%;
+}
+div.validation-error {
+    background-color: darksalmon;
+    color: red;
+    text-align: left;
+    padding: 5px 10px;
+    margin-top: 4px;
+    border-radius: 4px;
+}
+button:hover,a.btn:hover {
+    cursor: pointer;
+}
+
+.col-number {
+  background-color: #dbdbdb;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  text-align: center;
+}
+.col-text {
+  text-align: left;
+}
+.align-center:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  text-align: center;
+}
+
+.row-color {
+  border-bottom: 1px solid #dbdbdb;
+  background-color: #eee;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+.row-color div {
+  height: 2.5em;
+  line-height: 2.5em;
+  vertical-align: middle;
+}
+
+/************************************/
+.modal-dialog {
+    -webkit-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 20%;
+    margin: 0 auto;
+    width: 600px !important;
+}
+.modal-header {
+    background-color: #17a2b8;
+    border: 1px solid #17a2b8;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.modal-title {
+  color: #eee;
+}
+.modal-content {
+    overflow:hidden;
+}
+/************************************/
+
+.autohidden {
+    -webkit-animation: seconds 1.0s forwards;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 5s;
+    animation: seconds 1.0s forwards;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    position: relative;
+      
+  }
+  @-webkit-keyframes seconds {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      left: -9999px; 
+      position: absolute;   
+    }
+  }
+  @keyframes seconds {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      left: -9999px;
+      position: absolute;     
+    }
+  }
